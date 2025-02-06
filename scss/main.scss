@@ -1,0 +1,10 @@
+@import "variables";
+@import "mixins";
+@import "navbar";
+
+body{
+    background-color: $primary-bg;
+    color:$text-color;
+    font-family: 'Montserrat', sans-serif;
+
+}

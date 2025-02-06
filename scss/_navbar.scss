@@ -1,0 +1,78 @@
+// _navbar.scss
+.navbar {
+    padding: 1.25rem 3rem;
+    margin: 10px 50px;
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+  
+      @include respond(lg) {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  
+    .logo {
+      font-size: $font-lg;
+      font-weight: bold;
+      span {
+        &:first-child {
+          font-weight: 800;
+        }
+        &:last-child {
+          font-weight: 400;
+        }
+      }
+    }
+  
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.75rem;
+  
+      a {
+        text-decoration: none;
+        color: $text-color;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  
+    .icons {
+      @include flex-center(1rem);
+      img {
+        width: 1.25rem;
+      }
+    }
+  
+    .auth-buttons {
+      @include flex-center(1.5rem);
+       
+  
+      .btn-login {
+            background-color: transparent;
+            color: #fff;
+            padding: 10px 25px;
+            border: none;
+            font-size: 15px;
+            cursor: pointer;
+            text-wrap: nowrap;
+        }
+    
+        .btn-signup {
+            text-wrap: nowrap;
+            @include button-style();
+
+        }
+    }
+  
+    .divider {
+      width: 100%;
+      border-top: 0.8px dashed $border-color;
+      margin-top: 1rem;
+    }
+  }
+  

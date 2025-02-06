@@ -1,0 +1,28 @@
+
+@mixin respond($size) {
+    @if map-has-key($breakpoints, $size) {
+      @media (min-width: map-get($breakpoints, $size)) {
+        @content;
+      }
+    }
+  }
+
+
+@mixin flex-center($gap: 0) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $gap;
+  }
+  
+  @mixin button-style($radius: 25px 0px 25px 0px) {
+    background: transparent;
+    color: $text-color;
+    padding: 0.8rem 1.8rem;
+    border-radius: $radius;
+    border: 1px solid white;
+    cursor: pointer;
+    &:hover {
+      background: $button-hover;
+    }
+  }
