@@ -26,3 +26,17 @@
       background: $button-hover;
     }
   }
+  @mixin grid-layout($columns-sm: 1, $columns-md: 2, $columns-lg: 3) {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat($columns-sm, 1fr);
+  
+    @include respond(md) {
+      grid-template-columns: repeat($columns-md, 1fr);
+    }
+  
+    @include respond(lg) {
+      grid-template-columns: repeat($columns-lg, 1fr);
+    }
+  }
+  
