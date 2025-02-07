@@ -1,0 +1,101 @@
+// _hero.scss
+@import 'variables';
+@import 'mixins';
+
+.hero {
+    position: relative;
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 1050px;
+    height: 450px;
+    border: 2px dashed $border-color;
+    border-bottom-right-radius: 100px;
+    text-align: center;
+
+    h1 {
+        position: absolute;
+        top: -13%;
+        background-color: $primary-bg;
+
+
+        width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0.5rem 1rem;
+        font-size: 25px;
+        font-weight: bold;
+
+        @include respond(md) {
+            font-size: 40px;
+        }
+    }
+
+    p {
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 14px;
+        font-weight:500;
+        text-wrap: wrap;
+        padding: 0 1rem;
+
+        @include respond(md) {
+            font-size: 18px;
+            text-wrap: nowrap;
+
+        }
+    }
+
+    .buttons {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 1.5rem;
+
+        button {
+            @include button-style(0px 25px 0px 25px);
+        }
+    }
+
+    .glow-circle {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(8, 79, 199, 0.5) 0%, rgba(8, 79, 199, 0) 60%);
+        filter: blur(40px);
+
+        @include respond(sm) {
+            width: 600px;
+            height: 600px;
+        }
+
+        @include respond(lg) {
+            width: 700px;
+            height: 700px;
+        }
+    }
+
+    .rocket {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 300px;
+        margin-top: 70px;
+
+        @include respond(sm) {
+            width: 450px;
+        }
+
+        @include respond(lg) {
+            width: 600px;
+        }
+    }
+}
