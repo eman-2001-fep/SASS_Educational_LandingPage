@@ -7,13 +7,15 @@
 @import "category";
 @import "testimonials";
 @import "news";
-@import"joinus";
+@import "joinus";
+@import "footer";
 
 
 
-body{
+body {
     background-color: $primary-bg;
-    color:$text-color;
+    color: $text-color;
+    margin: 0 0;
     font-family: 'Montserrat', sans-serif;
 
 }

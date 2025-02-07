@@ -1,0 +1,142 @@
+.footer {
+    background-color: $footer-bg;
+    padding: 4rem 5rem;
+    color: $text-color;
+
+    .footer-container {
+        @include flex-center(2rem);
+        flex-direction: column;
+        text-align: center;
+
+        @include respond(md) {
+            flex-direction: row;
+            align-items: flex-start;
+            text-align: left;
+            gap: 4rem;
+        }
+
+        > div:first-child {
+            max-width: 22rem;
+            font-size: $font-lg;
+
+            span {
+                &:first-child {
+                  font-weight: 900;
+                }
+                &:last-child {
+                  font-weight: 500;
+                }
+              }
+
+            p {
+                font-size: $font-xs;
+                font-weight: 200;
+                padding-top: 2rem;
+                line-height: 1.6;
+            }
+        }
+
+        .quick-links {
+            h3 {
+                font-size: $font-md;
+                font-weight: bold;
+                margin-bottom: 1.5rem;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 0.8rem;
+                
+                @include respond(md) {
+                    @include grid-layout(2, 2, 2);
+                }
+
+                li {
+                    a {
+                        font-size: $font-xs;
+                        font-weight: 100;
+                        text-decoration: none;
+                        color: inherit;
+                        transition: color 0.3s ease;
+
+                        &:hover {
+                            color: $joinus_title;
+                        }
+                    }
+                }
+            }
+        }
+
+        .contact-us {
+            h3 {
+                font-size: $font-md;
+                font-weight: bold;
+                margin-bottom: 1.5rem;
+            }
+
+            .contact-grid {
+                @include grid-layout(1, 1, 2);
+                gap: 1rem;
+
+                .contact-item {
+                    font-size: $font-xs;
+                    font-weight: 100;
+
+                    @include flex-center(0.8rem);
+                    justify-content: flex-start;
+
+                    i {
+                        font-size: $font-xs;
+                        color: $text-light;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: inherit;
+                        transition: color 0.3s ease;
+
+                        &:hover {
+                            color: $joinus_title;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    hr {
+        margin: 2.5rem 0;
+        border: none;
+        height: 1px;
+        background-color: rgba($border-color, 0.2);
+    }
+
+    .footer-bottom {
+        @include flex-center(1rem);
+        justify-content: space-between;
+        font-size: $font-xs;
+        flex-wrap: wrap;
+        text-align: center;
+
+        @include respond(md) {
+            flex-wrap: nowrap;
+        }
+
+        .social-icons {
+            @include flex-center(1rem);
+
+            a {
+                color: inherit;
+                font-size: $font-xs;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: $joinus_title;
+                }
+            }
+        }
+    }
+}
