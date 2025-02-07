@@ -1,0 +1,61 @@
+// _news.scss
+.news {
+    padding: 2.5rem;
+    margin: 1.25rem 0;
+    text-align: center;
+    color: $text-color;
+
+    .about {
+        margin: 5rem 0;
+
+        h2 {
+            font-size: $font-lg;
+            font-weight: bold;
+            margin-bottom: 1.25rem;
+        }
+
+        h3 {
+            font-size: $font-xs;
+            color: $text-light;
+            line-height: 1.6;
+        }
+    }
+
+    .news-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        margin: 0 2.5rem;
+
+        @include respond(md) {
+            flex-direction: row;
+        }
+
+        .card-description {
+            text-align: left;
+            margin-left: 2.5rem;
+
+            img {
+                width: 80%;
+
+                @include respond(md) {
+                    width: 100%;
+                }
+
+            
+            }
+
+            p {
+                font-size: $font-sm;
+                font-weight: bold;
+                line-height: 1.4;
+            }
+
+            h3 {
+                font-size: $font-xs
+            }
+        }
+    }
+}
